@@ -3,3 +3,4 @@
 .DS_Store
 elasticsearch/data/
 logstash/data/
+*:Zone.Identifier
