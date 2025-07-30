@@ -1,0 +1,58 @@
+{
+  "trigger": {
+    "schedule": {
+      "interval": "1m"
+    }
+  },
+  "input": {
+    "search": {
+      "request": {
+        "search_type": "query_then_fetch",
+        "indices": ["syslog-*"],
+        "rest_total_hits_as_int": true,
+        "body": {
+          "query": {
+            "bool": {
+              "must": [
+                {
+                  "term": {
+                    "threat_type": "potential_ransomware"
+                  }
+                },
+                {
+                  "term": {
+                    "alert_priority": "critical"
+                  }
+                },
+                {
+                  "range": {
+                    "@timestamp": {
+                      "gte": "now-2m"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "size": 10
+        }
+      }
+    }
+  },
+  "condition": {
+    "compare": {
+      "ctx.payload.hits.total": {
+        "gt": 0
+      }
+    }
+  },
+  "actions": {
+    "log_alert": {
+      "logging": {
+        "level": "info",
+        "text": "🚨 RANSOMWARE ALERT: {{ctx.payload.hits.total}} critical events detected! Immediate investigation required."
+      }
+    }
+  },
+  "throttle_period": "2m"
+}

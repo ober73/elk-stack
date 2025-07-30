@@ -1,0 +1,10 @@
+{
+  "attributes": {
+    "title": "🚨 Critical Security Alerts",
+    "visState": "{\"title\":\"🚨 Critical Security Alerts\",\"type\":\"metric\",\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"params\":{}}],\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Red to Green\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#d32f2f\",\"bgColor\":true,\"labelColor\":false,\"subText\":\"Ransomware Events Detected\",\"fontSize\":72}}}}",
+    "uiStateJSON": "{}",
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"index\":\"syslog-pattern\",\"query\":{\"bool\":{\"must\":[{\"term\":{\"threat_type\":\"potential_ransomware\"}},{\"term\":{\"alert_priority\":\"critical\"}}]}},\"filter\":[]}"
+    }
+  }
+}

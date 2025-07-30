@@ -1,0 +1,17 @@
+{
+  "attributes": {
+    "title": "Veeam Security Alert Dashboard",
+    "description": "Simple dashboard showing critical ransomware alerts from Veeam",
+    "panelsJSON": "[]",
+    "timeRestore": false,
+    "timeTo": "now",
+    "timeFrom": "now-24h",
+    "refreshInterval": {
+      "pause": false,
+      "value": 30000
+    },
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"query\":{\"match_all\":{}},\"filter\":[]}"
+    }
+  }
+}
