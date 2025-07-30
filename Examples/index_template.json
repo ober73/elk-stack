@@ -1,0 +1,188 @@
+{
+  "index_patterns": ["syslog-*"],
+  "priority": 200,
+  "template": {
+    "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 1,
+      "index.refresh_interval": "5s",
+      "index.codec": "best_compression",
+      "index.mapping.total_fields.limit": 2000,
+      "index.mapping.depth.limit": 20
+    },
+    "mappings": {
+      "properties": {
+        "@timestamp": { 
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "@version": { "type": "keyword" },
+        "timestamp": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "detection_time_utc": {
+          "type": "date",
+          "format": "MM/dd/yyyy HH:mm:ss||strict_date_optional_time||epoch_millis"
+        },
+        "detection_timestamp": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "host": {
+          "type": "keyword",
+          "fields": {
+            "text": { "type": "text" }
+          }
+        },
+        "hostname": {
+          "type": "keyword",
+          "fields": {
+            "text": { "type": "text" }
+          }
+        },
+        "source_host": {
+          "type": "keyword",
+          "fields": {
+            "text": { "type": "text" }
+          }
+        },
+        "application": {
+          "type": "keyword",
+          "fields": {
+            "text": { "type": "text" }
+          }
+        },
+        "app_type": {
+          "type": "keyword",
+          "fields": {
+            "text": { "type": "text" }
+          }
+        },
+        "type": { "type": "keyword" },
+        "version": { "type": "keyword" },
+        "proc_id": { "type": "keyword" },
+        "msg_id": { "type": "keyword" },
+        "priority": { "type": "integer" },
+        "facility": { "type": "integer" },
+        "severity_level": { "type": "integer" },
+        "severity": {
+          "type": "keyword",
+          "fields": {
+            "text": { "type": "text" }
+          }
+        },
+        "event_category": { "type": "keyword" },
+        "event_type": { "type": "keyword" },
+        "business_impact": { "type": "keyword" },
+        "threat_type": { "type": "keyword" },
+        "alert_priority": { "type": "keyword" },
+        "recommendation": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 512
+            }
+          }
+        },
+        "enterprise_id": { "type": "keyword" },
+        "category_id": { "type": "integer" },
+        "instance_id": { "type": "integer" },
+        "oib_id": {
+          "type": "keyword",
+          "fields": {
+            "text": { "type": "text" }
+          }
+        },
+        "activity_type": { "type": "keyword" },
+        "username": { "type": "keyword" },
+        "clean_username": { "type": "keyword" },
+        "user_domain": { "type": "keyword" },
+        "user_type": { "type": "keyword" },
+        "object_name": { "type": "keyword" },
+        "vbr_hostname": {
+          "type": "keyword",
+          "fields": {
+            "text": { "type": "text" }
+          }
+        },
+        "node_name": { "type": "keyword" },
+        "event_message": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 1024
+            }
+          }
+        },
+        "description": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 1024
+            }
+          }
+        },
+        "raw_message": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 2048
+            }
+          }
+        },
+        "raw_message_backup": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 2048
+            }
+          }
+        },
+        "message": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 1024
+            }
+          }
+        },
+        "parsing_status": { "type": "keyword" },
+        "parsing_error": { "type": "keyword" },
+        "time_context": { "type": "keyword" },
+        "suspicious_timing": { "type": "boolean" },
+        "tags": { 
+          "type": "keyword" 
+        },
+        "fields": {
+          "type": "object",
+          "enabled": false
+        },
+        "event": {
+          "properties": {
+            "original": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 2048
+                }
+              }
+            }
+          }
+        },
+        "log": {
+          "properties": {
+            "level": { "type": "keyword" }
+          }
+        }
+      }
+    }
+  }
+}
