@@ -12,7 +12,7 @@
     },
     "mappings": {
       "properties": {
-        "@timestamp": { 
+        "@timestamp": {
           "type": "date",
           "format": "strict_date_optional_time||epoch_millis"
         },
@@ -157,8 +157,8 @@
         "parsing_error": { "type": "keyword" },
         "time_context": { "type": "keyword" },
         "suspicious_timing": { "type": "boolean" },
-        "tags": { 
-          "type": "keyword" 
+        "tags": {
+          "type": "keyword"
         },
         "fields": {
           "type": "object",

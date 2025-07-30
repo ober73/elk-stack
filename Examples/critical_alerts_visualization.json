@@ -1,0 +1,10 @@
+{
+  "attributes": {
+    "title": "🚨 Critical Threat Alerts",
+    "visState": "{\"title\":\"🚨 Critical Threat Alerts\",\"type\":\"metric\",\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"params\":{}}],\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Red to Green\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":60}}}}",
+    "uiStateJSON": "{}",
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"index\":\"syslog-pattern\",\"query\":{\"bool\":{\"must\":[{\"term\":{\"alert_priority\":\"critical\"}},{\"term\":{\"event_type\":\"security_event\"}}]}},\"filter\":[]}"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "attributes": {
+    "title": "Threat Type Distribution",
+    "visState": "{\"title\":\"Threat Type Distribution\",\"type\":\"pie\",\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"params\":{}},{\"id\":\"2\",\"type\":\"terms\",\"params\":{\"field\":\"threat_type\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true}}",
+    "uiStateJSON": "{}",
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"index\":\"syslog-pattern\",\"query\":{\"bool\":{\"must\":[{\"exists\":{\"field\":\"threat_type\"}},{\"term\":{\"app_type\":\"veeam\"}}]}},\"filter\":[]}"
+    }
+  }
+}
