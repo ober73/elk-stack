@@ -191,6 +191,3 @@ Found an issue or have suggestions? Feel free to:
 
 ---
 
-**Happy logging!** 🚀
-
-*This lab environment is part of the SIEM & Monitoring Blog Series. Stay tuned for the next post covering ElasticSecurity and Fluentd alternatives.*
