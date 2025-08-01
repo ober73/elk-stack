@@ -185,13 +185,5 @@ Once your environment is running, try these exercises:
 ## 🤝 Contributing
 
 Found an issue or have suggestions? Feel free to:
-- Open an issue
-- Submit a pull request
 - Reach out via the blog comments
-
-## Commands staring in Section 5
-
-```curl -X PUT "localhost:9200/_index_template/veeam-syslog-template" -H "Content-Type: application/json" -d @index_template.json
-```
-
 --- 
