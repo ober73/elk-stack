@@ -189,5 +189,9 @@ Found an issue or have suggestions? Feel free to:
 - Submit a pull request
 - Reach out via the blog comments
 
----
+## Commands staring in Section 5
 
+```curl -X PUT "localhost:9200/_index_template/veeam-syslog-template" -H "Content-Type: application/json" -d @index_template.json
+```
+
+--- 
