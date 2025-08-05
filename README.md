@@ -1,6 +1,6 @@
 # ELK Stack Tutorial - Docker Lab Environment
 
-> **Part of the SIEM & Monitoring Blog Series by Geoffrey Burke**
+> **Part of the SIEM & Monitoring Blog Series by Geoff Burke**
 
 This repository contains everything you need to set up a functional ELK (Elasticsearch, Logstash, Kibana) test environment using Docker. This is a hands-on companion to the blog post ["Hands-On Practice with the ELK Stack"](https://objectfirst.com/blog/hands-on-practice-with-the-elk-stack/) and provides a ready-to-run environment for learning how the ELK stack processes and visualizes log data.
 
@@ -9,7 +9,7 @@ This repository contains everything you need to set up a functional ELK (Elastic
 - How to deploy a complete ELK stack using Docker Compose
 - Configure Logstash to parse Veeam Backup & Replication syslog messages
 - Create data views and explore logs in Kibana
-- Set up syslog forwarding from applications to ELK
+- Set up syslog forwarding from Veeam to ELK
 
 ## 📋 Prerequisites
 
