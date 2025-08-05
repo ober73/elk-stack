@@ -41,7 +41,7 @@ docker compose version
 ### 2. Clone and Run
 
 ```bash
-git clone https://github.com/ober73/elk-stack.git
+git clone https://github.com/object1st/elk-stack.git
 cd elk-stack
 docker compose up -d
 ```
