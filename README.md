@@ -197,8 +197,4 @@ Once your environment is running, try these exercises:
 - **Not suitable for production** - lacks authentication, encryption, and proper security configurations
 - **Resource usage** - Monitor your system resources as ELK can be memory-intensive
 
-## 🤝 Contributing
-
-Found an issue or have suggestions? Feel free to:
-- Reach out via the blog comments
 --- 
