@@ -22,9 +22,24 @@ This repository contains everything you need to set up a functional ELK (Elastic
 
 ### 1. Install Docker (if not already installed)
 
-Ubuntu Package
+```bash
+sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
+```
 
+```bash
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+```
+
+```bash
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
+
+Ubuntu Package
+```bash
+sudo apt update
 sudo apt install docker.io
+```
+Or you can curl the latest version:
 
 ```bash
 curl -fsSL https://get.docker.com | sh
