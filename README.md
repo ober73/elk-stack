@@ -127,9 +127,9 @@ echo '{"message": "Test log entry", "level": "info", "timestamp": "'$(date -Isec
 ## 📊 Exploring Data in Kibana
 
 1. **Access Kibana** at `http://your-host:5601`
-2. **Create a Data View:**
+2. **Create a Index Pattern:**
    - Go to **Menu > Discover**
-   - Click **"Create data view"**
+   - Click **"Create Index Pattern"**
    - Use index pattern: `veeam-logs-*` or `logs-*`
    - Set timestamp field: `@timestamp`
 3. **Explore your logs** in the Discover interface
